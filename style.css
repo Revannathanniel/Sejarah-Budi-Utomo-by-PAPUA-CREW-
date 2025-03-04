@@ -1,88 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+/* Styling dasar */
 body {
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1e1e2f, #4a4a6a);
-    color: #fff;
 }
 
-header {
-    background: linear-gradient(90deg, #ff4e50, #fc913a);
-    text-align: center;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
+/* Header */
+h1 {
+    font-size: 32px;
+    margin-top: 20px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.container {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+/* Tombol navigasi */
+.nav-buttons {
     margin-top: 20px;
 }
 
 button {
-    background: linear-gradient(90deg, #ff4e50, #fc913a);
-    color: #fff;
+    background: linear-gradient(to right, #ff512f, #dd2476);
     border: none;
-    padding: 12px 18px;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 25px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: linear-gradient(90deg, #fc913a, #ff4e50);
-    transform: scale(1.1);
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    transform: scale(1.05);
 }
 
+/* Konten */
 .content {
     display: none;
-    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
     padding: 20px;
-    background: rgba(255, 255, 255, 0.15);
+    margin: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border-left: 5px solid #ff4e50;
-    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-h2 {
-    color: #ffb385;
-    border-bottom: 2px solid #ff4e50;
-    padding-bottom: 5px;
+/* Efek transisi saat muncul */
+.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-p {
-    line-height: 1.6;
-    text-align: justify;
-}
-
-footer {
-    background: linear-gradient(90deg, #ff4e50, #fc913a);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-    font-weight: bold;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
