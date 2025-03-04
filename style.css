@@ -1,60 +1,79 @@
-/* Styling dasar */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: white;
-    text-align: center;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header */
-h1 {
-    font-size: 32px;
-    margin-top: 20px;
-    text-transform: uppercase;
-}
-
-/* Tombol navigasi */
-.nav-buttons {
-    margin-top: 20px;
-}
-
-button {
-    background: linear-gradient(to right, #ff512f, #dd2476);
-    border: none;
-    padding: 12px 20px;
-    margin: 10px;
-    font-size: 18px;
-    color: white;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: linear-gradient(to right, #ff9966, #ff5e62);
-    transform: scale(1.05);
-}
-
-/* Konten */
-.content {
-    display: none;
-    background: rgba(255, 255, 255, 0.2);
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
     padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
 }
 
-/* Efek transisi saat muncul */
-.show {
-    display: block;
-    animation: fadeIn 0.5s ease-in-out;
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+header h1 {
+    font-size: 2.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+nav .menu-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav .menu-btn:hover {
+    background-color: #2980b9;
+}
+
+section#content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#content h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+section#content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav .menu-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
