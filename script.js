@@ -1,54 +1,51 @@
-function tampilkanMateri(bagian) {
-    let materi = {
-        pendahuluan: `
-            <h2>Pendahuluan</h2>
-            <p>Pada awal abad ke-20, Indonesia masih berada di bawah penjajahan Belanda. Saat itu, kehidupan rakyat pribumi sangat sulit, terutama dalam hal pendidikan dan ekonomi. Kesempatan belajar bagi rakyat biasa sangat terbatas, karena pendidikan hanya bisa diakses oleh kaum elite dan priyayi.
-Namun, muncul kesadaran di kalangan pemuda, terutama mahasiswa STOVIA (School tot Opleiding van Inlandsche Artsen), bahwa satu-satunya cara untuk meningkatkan kesejahteraan rakyat adalah melalui pendidikan.
-Kesadaran ini melahirkan organisasi Budi Utomo, yang menjadi organisasi modern pertama di Indonesia dan dianggap sebagai awal Kebangkitan Nasional. Organisasi ini bertujuan untuk meningkatkan pendidikan dan kebudayaan pribumi, serta menjadi inspirasi bagi gerakan nasionalisme yang lebih luas hingga menuju kemerdekaan Indonesia.</p>
-        `,
-        latar: `
-            <h2>Latar Belakang Pendirian Budi Utomo</h2>
-            <p>Budi Utomo lahir karena beberapa faktor penting yang mendorong kesadaran nasional, yaitu:
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".menu-btn");
+    const contentBox = document.getElementById("content");
 
-1. Pendidikan yang Tidak Merata
-
-Pada masa kolonial, pendidikan di Indonesia sangat terbatas.
-Sekolah-sekolah yang ada hanya diperuntukkan bagi anak-anak dari kalangan priyayi (bangsawan) dan pegawai pemerintah.
-Rakyat biasa sulit mendapatkan pendidikan karena biayanya mahal dan kesempatan sangat terbatas.
-Kurikulum yang diajarkan lebih banyak berorientasi pada kepentingan pemerintah kolonial.
-
-<br>
-2. Politik Etis Belanda (1901)
-Politik Etis diperkenalkan oleh Ratu Wilhelmina dan terdiri dari tiga program utama: irigasi (pengairan), emigrasi (perpindahan penduduk), dan edukasi (pendidikan).
-Pemerintah kolonial mulai membangun beberapa sekolah untuk pribumi, tetapi jumlahnya masih sangat sedikit dan lebih menguntungkan Belanda.
-Pendidikan untuk pribumi lebih berfokus pada mencetak pegawai rendahan, bukan untuk membangun intelektual pribumi.
-
-<br>
-3. Perubahan Sosial dan Munculnya Kaum Intelektual Pribumi
-Dengan semakin banyak pribumi yang mendapatkan pendidikan, lahirlah generasi baru yang mulai sadar akan pentingnya persatuan dan kemajuan bangsa.
-Mereka menyadari bahwa satu-satunya cara untuk meningkatkan kesejahteraan adalah melalui pendidikan.</p>
-        `,
-        pendirian: `
-            <h2>Pendirian Budi Utomo</h2>
-            <p>Budi Utomo resmi didirikan pada 20 Mei 1908 di Batavia...</p>
-        `,
-        kongres: `
-            <h2>Kongres Pertama Budi Utomo</h2>
-            <p>Kongres pertama diadakan pada 3-5 Oktober 1908 di Yogyakarta...</p>
-        `,
-        tujuan: `
-            <h2>Sifat dan Tujuan Organisasi</h2>
-            <p>Budi Utomo bersifat sosial, budaya, dan pendidikan...</p>
-        `,
-        kemunduran: `
-            <h2>Kemunduran Organisasi</h2>
-            <p>1. Kurangnya keberanian dalam politik<br>2. Munculnya organisasi baru...</p>
-        `,
-        kesimpulan: `
-            <h2>Kesimpulan</h2>
-            <p>Budi Utomo menjadi pelopor pergerakan nasional dan menginspirasi perjuangan kemerdekaan...</p>
-        `
+    const contents = {
+        "pendahuluan": `<h2>Pendahuluan</h2><p>Pada awal abad ke-20, Indonesia masih dijajah Belanda...</p>`,
+        "latar-belakang": `<h2>Latar Belakang</h2><ul>
+                            <li><strong>Pendidikan Tidak Merata:</strong> Sekolah hanya untuk priyayi...</li>
+                            <li><strong>Politik Etis:</strong> Belanda mulai membuka sekolah, tapi terbatas...</li>
+                            <li><strong>Perubahan Sosial:</strong> Kaum intelektual mulai sadar...</li>
+                            <li><strong>Pengaruh Luar Negeri:</strong> Gerakan nasionalisme dari India...</li>
+                           </ul>`,
+        "pendirian": `<h2>Pendirian Budi Utomo</h2><p>Budi Utomo didirikan pada 20 Mei 1908...</p>
+                      <ul>
+                        <li><strong>dr. Wahidin Sudirohusodo:</strong> Mengusulkan gagasan organisasi...</li>
+                        <li><strong>dr. Soetomo:</strong> Mendirikan organisasi bersama mahasiswa STOVIA...</li>
+                        <li><strong>R.T. Ario Tirtokusumo:</strong> Ketua pertama Budi Utomo...</li>
+                      </ul>`,
+        "kongres": `<h2>Kongres Pertama</h2><p>Kongres diadakan pada 3-5 Oktober 1908 di Yogyakarta...</p>
+                    <ul>
+                        <li><strong>Ketua Pertama:</strong> R.T. Ario Tirtokusumo</li>
+                        <li><strong>Kantor Pusat:</strong> Yogyakarta</li>
+                        <li><strong>Fokus:</strong> Pendidikan dan budaya, bukan politik</li>
+                    </ul>`,
+        "tujuan": `<h2>Sifat & Tujuan</h2><p>Budi Utomo bersifat sosial dan pendidikan...</p>
+                   <ul>
+                    <li><strong>Meningkatkan Pendidikan:</strong> Mendorong rakyat pribumi bersekolah...</li>
+                    <li><strong>Memajukan Budaya:</strong> Melestarikan seni dan budaya Indonesia...</li>
+                    <li><strong>Persatuan:</strong> Membangun kesadaran nasionalisme...</li>
+                   </ul>`,
+        "kemunduran": `<h2>Kemunduran</h2><p>Organisasi mengalami kemunduran karena...</p>
+                       <ul>
+                        <li><strong>Kurangnya Keberanian Politik:</strong> Tidak berani menentang Belanda secara langsung...</li>
+                        <li><strong>Munculnya Organisasi Baru:</strong> Sarekat Islam dan Indische Partij mulai menarik lebih banyak anggota...</li>
+                        <li><strong>Bergabung dengan Parindra:</strong> Pada 1935, Budi Utomo melebur dengan Partai Indonesia Raya...</li>
+                       </ul>`,
+        "kesimpulan": `<h2>Kesimpulan</h2><p>Budi Utomo adalah pelopor pergerakan nasional di Indonesia...</p>
+                       <ul>
+                        <li>Menjadi organisasi pertama yang membangkitkan kesadaran nasional.</li>
+                        <li>Berfokus pada pendidikan dan kebudayaan.</li>
+                        <li>Menginspirasi lahirnya organisasi nasional lainnya.</li>
+                       </ul>`
     };
 
-    document.getElementById("konten").innerHTML = materi[bagian];
-}
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            const section = this.getAttribute("data-section");
+            contentBox.innerHTML = contents[section];
+        });
+    });
+});
