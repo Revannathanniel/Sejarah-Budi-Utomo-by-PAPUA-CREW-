@@ -1,85 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=IM+Fell+English&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
 body {
-    font-family: 'IM Fell English', serif;
-    background: url('https://www.transparenttextures.com/patterns/old-map.png'), #3e2f20;
-    color: #f4e9d8;
-    text-align: center;
+    font-family: 'Merriweather', serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5dc; /* Warna krem seperti kertas tua */
+    color: #333;
 }
 
-/* Header */
 header {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background: #8b0000; /* Merah tua berkesan klasik */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 5px solid #5a0000;
 }
 
-header h1 {
-    font-size: 38px;
-    color: #e1c699;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-}
-
-header p {
-    font-size: 16px;
-    font-style: italic;
-}
-
-/* Container */
 .container {
-    width: 90%;
-    max-width: 850px;
-    margin: 40px auto;
+    width: 80%;
+    margin: auto;
     padding: 20px;
-    background: rgba(255, 248, 220, 0.2);
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 250, 220, 0.3);
 }
 
-/* Menu */
-.menu {
+.button-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.menu-btn {
-    background: linear-gradient(to bottom, #c4a484, #8b6f47);
-    border: 2px solid #6d4c2e;
-    padding: 12px 18px;
+button {
+    background: #5a0000;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
     font-size: 16px;
-    font-weight: bold;
-    color: #fff8dc;
     cursor: pointer;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    font-family: 'Great Vibes', cursive;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
 }
 
-.menu-btn:hover {
-    background: #9b7653;
+button:hover {
+    background: #8b0000;
     transform: scale(1.1);
 }
 
-/* Konten */
-.content-box {
+.content {
+    display: none;
     margin-top: 20px;
     padding: 20px;
-    background: rgba(255, 250, 235, 0.2);
-    border-radius: 15px;
-    transition: all 0.3s ease-in-out;
-    text-align: left;
-    font-size: 18px;
-    border: 2px solid #c4a484;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid #5a0000;
 }
 
-/* Footer */
+h2 {
+    color: #5a0000;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
 footer {
-    margin-top: 40px;
-    padding: 15px;
-    font-size: 14px;
-    background: rgba(0, 0, 0, 0.3);
+    background: #5a0000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
 }
