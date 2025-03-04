@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+/* Reset Dasar */
+body {
+    font-family: 'EB Garamond', serif;
+    background: url('https://www.transparenttextures.com/patterns/aged-paper.png'), linear-gradient(to bottom, #7c5e3d, #4e3629);
+    color: #f4e9d8;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 32px;
+    margin: 0;
+    color: #f4e9d8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 250, 235, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-btn {
+    background: rgba(255, 250, 235, 0.2);
+    border: 2px solid #c4a484;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f4e9d8;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'EB Garamond', serif;
+}
+
+.menu-btn:hover {
+    background: rgba(255, 250, 235, 0.4);
+    transform: scale(1.1);
+}
+
+/* Konten */
+.content-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 250, 235, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.3);
+}
